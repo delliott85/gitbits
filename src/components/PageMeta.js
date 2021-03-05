@@ -21,7 +21,7 @@ export default function PageMeta() {
             <meta property="og:url" content={url} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={title} />
-            <meta property="og:image" content="/og-image.png" />
+            <meta property="og:image" content="https://gitbits.xyz/og-image.png" />
             <meta property="og:image:alt" content="Gitbits logo" />
             <meta property="og:description" content={desc} />
             <meta property="og:site_name" content="Gitbits" />
@@ -33,7 +33,7 @@ export default function PageMeta() {
             <meta name="twitter:url" content={url} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={desc} />
-            <meta name="twitter:image" content="/card-image.png" />
+            <meta name="twitter:image" content="https://gitbits.xyz/card-image.png" />
             <meta name="twitter:image:alt" content="Gitbits logo" />
         </Helmet>
     );
