@@ -13,6 +13,12 @@ module.exports = {
         options: {
             implementation: require("node-sass"),
         }
+    },
+    {
+        resolve: `gatsby-plugin-google-gtag`,
+        options: {
+            trackingIds: ["G-V9DJE653L5"]
+        }
     }
-  ],
+  ]
 }
