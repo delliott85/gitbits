@@ -1,0 +1,20 @@
+:root {
+    // Type
+    --font: 'Roboto', sans-serif;
+    --monoFont: 'Roboto Mono', monospace;
+
+    // Colors
+    --purple: #03071e;
+    --orange: #dc2f02;
+    --orangeLight: #ff6c47;
+    --yellow: #ffba08;
+    --yellowLight: #fff9e6;
+
+    // Measurements
+    --spacing: 15px;
+    --headerWidth: 350px;
+
+    @media (min-width: 1000px) {
+        --spacing: 30px;
+    }
+}
