@@ -1,13 +1,16 @@
 import React from 'react';
-
-import { commands } from '../data';
+import PropTypes from 'prop-types';
 
 import LinkIcon from './icons/Link';
 
 import styles from './Commands.module.scss';
 
-export default function Commands() {
-    const commandList = commands.map((command, i) => {
+export default function Commands({ data }) {
+    if (!data) {
+        return <p>Nothing to see here</p>
+    }
+
+    const commandList = data.map((command, i) => {
         let commonFlags;
         let link;
 
@@ -64,3 +67,7 @@ export default function Commands() {
         </ul>
     );
 }
+
+Commands.propTypes = {
+    data: PropTypes.array
+};

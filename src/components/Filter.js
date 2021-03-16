@@ -1,30 +1,51 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { mapColorToTag, tags } from '../../constants';
+import { tags } from '../../constants';
 
 import styles from './Filter.module.scss';
 
-export default function Filter() {
-    const options = Object.keys(tags);
-    const labels = options.map((option) => {
-        return tags[option]
+export default function Filter({ onFilterClick, activeTag }) {
+    const allTags = Object.keys(tags).map((tag, i) => {
+    
+        return (
+            <li key={`tag-button-${i}`}>
+                <button
+                    className={`${styles.button}${activeTag === tags[tag] ? ` ${styles.active}` : ''}`}
+                    data-tag={tags[tag]}
+                    onClick={onFilterClick}
+                >
+                    {tags[tag]}
+                </button>
+            </li>
+        );
     });
 
-    const filterOptions = labels.map((option, i) => {
-        return (
-            <li
-                key={`option-${i}`}
+    const allButton = (
+        <li>
+            <button
+                className={`${styles.button}${activeTag === 'all' ? ` ${styles.active}` : ''}`}
+                data-tag="all"
+                onClick={onFilterClick}
             >
-                {option}
-            </li>
-        )
-    });
+                All Commands
+            </button>
+        </li>
+    );
+
+    allTags.unshift(allButton)
 
     return (
         <div className={styles.filter}>
-            <ul>
-                {filterOptions}
+            <h3 className={styles.title}>Filter by tag</h3>
+            <ul className={styles.list}>
+                {allTags}
             </ul>
         </div>
     );
 }
+
+Filter.propTypes = {
+    onFilterClick: PropTypes.func,
+    activeTag: PropTypes.string
+};

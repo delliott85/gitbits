@@ -70,7 +70,7 @@ export const commands = [
         ]
     },
     {
-        tag: tags.GIT_BRANCH,
+        tag: tags.TAG_BRANCH,
         command: 'git checkout',
         link: 'https://git-scm.com/docs/git-checkout',
         description: 'Update files in your local repository to match those of a different branch.',
@@ -86,7 +86,7 @@ export const commands = [
         ]
     },
     {
-        tag: tags.GIT_BRANCH,
+        tag: tags.TAG_BRANCH,
         command: 'git switch',
         link: 'https://git-scm.com/docs/git-switch',
         description: 'Swtich between previously checked-out, or newly created, branches.',

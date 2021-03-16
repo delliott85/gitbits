@@ -1,0 +1,38 @@
+.filter {
+    margin-top: 8rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2em;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+
+    li + li {
+        margin-top: 1em;
+    }
+}
+
+.button {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: var(--yellow);
+    }
+}
+
+.active {
+    padding-left: 1em;
+    color: var(--yellow);
+}
